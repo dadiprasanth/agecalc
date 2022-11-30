@@ -14,7 +14,8 @@ const fun=(e)=>{
   if(month.value==""||parseInt(month.value)>12||isNaN(month.value)){
     err.push("month field")
   }
-  if(year.value==""||isNaN(year.value||year.value<1000)){
+  console.log(year.value)
+  if(year.value==""||isNaN(year.value)||year.value<1000){
     err.push("year field")
   }
   console.log(err)
@@ -43,9 +44,19 @@ const fun=(e)=>{
     result.innerText=s
   }
 }
-// date.addEventListener("keyup",()=>{
-//   if(date.value.length>2){
-//     alert("only two digits")
-//   }
-// })
+date.addEventListener("keyup",()=>{
+  if(date.value.length>=2){
+    date.value=date.value.slice(0,2)
+  }
+})
+month.addEventListener("keyup",()=>{
+  if(month.value.length>=2){
+    month.value=month.value.slice(0,2)
+  }
+})
+year.addEventListener("keyup",()=>{
+  if(year.value.length>=4){
+    year.value=year.value.slice(0,4)
+  }
+})
 btn.addEventListener("click",fun)
