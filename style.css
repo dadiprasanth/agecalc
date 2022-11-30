@@ -1,0 +1,25 @@
+.conatiner{
+    background:skyblue;
+    text-align:center;
+    padding:20px;
+    width: 50%;
+    margin:auto;
+  }
+  .name{
+    background:white
+  }
+  .input{
+    display:flex;
+    justify-content:space-evenly;
+  }
+  form input{
+    border:1px solid blue;
+    width:80px;
+    border-radius:5px;
+  }
+  #but{
+   margin:20px;
+  }
+  #result{
+    color:blue;
+  }
